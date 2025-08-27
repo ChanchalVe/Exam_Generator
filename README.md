@@ -2,6 +2,8 @@
 
 A modern full-stack web application that helps primary school math teachers generate customized exam papers using Google Gemini AI. Built with React, Node.js, Express, and Tailwind CSS.
 
+## ✨ Demo video: https://youtu.be/dhPKMZzLjRI
+
 ## ✨ Features
 
 - **🤖 AI-Powered Generation**: Uses Google Gemini API to create contextually appropriate math questions
@@ -57,17 +59,20 @@ NODE_ENV=development
 ### 3. Start the Application
 
 **Terminal 1 - Start Backend Server:**
+
 ```bash
 cd server
 npm start
 ```
 
 **Terminal 2 - Start Frontend:**
+
 ```bash
 npm run dev
 ```
 
 The application will be available at:
+
 - **Frontend**: http://localhost:5173
 - **Backend API**: http://localhost:5000
 
@@ -100,6 +105,7 @@ ai-exam-generator/
 **Endpoint**: `POST /api/generate-exam`
 
 **Request Body**:
+
 ```json
 {
   "topic": "Fractions",
@@ -109,6 +115,7 @@ ai-exam-generator/
 ```
 
 **Response**:
+
 ```json
 {
   "questions": [
@@ -116,11 +123,7 @@ ai-exam-generator/
     "2. Simplify the fraction 6/8.",
     "..."
   ],
-  "answers": [
-    "1. 3/4",
-    "2. 3/4",
-    "..."
-  ]
+  "answers": ["1. 3/4", "2. 3/4", "..."]
 }
 ```
 
@@ -140,11 +143,13 @@ The application uses a carefully crafted design system:
 ### Available Scripts
 
 **Frontend**:
+
 - `npm run dev` - Start development server
 - `npm run build` - Build for production
 - `npm run lint` - Run ESLint
 
 **Backend**:
+
 - `npm start` - Start production server
 - `npm run dev` - Start development server with auto-reload
 
@@ -187,14 +192,17 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 **Common Issues**:
 
 1. **"GEMINI_API_KEY not configured"**
+
    - Ensure your `.env` file is in the `server` directory
    - Verify your API key is correct and active
 
 2. **CORS Errors**
+
    - Check that frontend URL matches `FRONTEND_URL` in `.env`
    - Ensure both servers are running
 
 3. **"Failed to generate exam"**
+
    - Check your internet connection
    - Verify API key permissions
    - Try with a simpler topic first
